@@ -10,20 +10,15 @@ const fahrenheitToCelsius = fahrenheitTemps.map(temp => (temp - 32) * 5 / 9);
 //* Then apply the conversion to calculate the total in the other unit of measurement
 //* Call the variables: tot_temperature_in_fahrenheit and tot_temperature_in_celsius
 
-// Combine all temperatures into unified lists
 const allInFahrenheit = fahrenheitTemps.concat(celsiusToFahrenheit);
 const allInCelsius = celsiusTemps.concat(fahrenheitToCelsius);
 
-// Sum the values
 const tot_temperature_in_fahrenheit = allInFahrenheit.reduce((acc, curr) => acc + curr, 0);
 const tot_temperature_in_celsius = allInCelsius.reduce((acc, curr) => acc + curr, 0);
 
-//! Start the calculation of the average temperatures
-//* Call the variables: avg_temperature_in_fahrenheit and avg_temperature_in_celsius
 const avg_temperature_in_fahrenheit = tot_temperature_in_fahrenheit / allInFahrenheit.length;
 const avg_temperature_in_celsius = tot_temperature_in_celsius / allInCelsius.length;
 
-//! Console.log the results for your own inspection if you'd like
 console.log(`Total Fahrenheit: ${tot_temperature_in_fahrenheit}`);
 console.log(`Average Fahrenheit: ${avg_temperature_in_fahrenheit.toFixed(2)}`);
 console.log(`Total Celsius: ${tot_temperature_in_celsius}`);
